@@ -22,6 +22,13 @@ function createWindow () {
     slashes: true
   }))
 
+  mainWindow.on('scroll-touch-begin', e => {
+    console.log('Scroll touch begin')
+  })
+  mainWindow.on('scroll-touch-end', e => {
+    console.log('Scroll touch end')
+  })
+
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
 
